@@ -507,8 +507,8 @@ h1 {
   }
 }
 
+/* Anglais + référentiel BUT R&T */
 
-/* ===== Ajouts v3 : anglais + référentiel BUT R&T ===== */
 .english-card {
   margin-top: 22px;
   padding: 18px 20px;
@@ -604,7 +604,8 @@ h1 {
   }
 }
 
-/* ===== Ajouts v4 : projets avec images ===== */
+/* Projets avec images */
+
 .route-grid-four {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
@@ -708,6 +709,8 @@ h1 {
   }
 }
 
+/* Alternance Orange */
+
 .accent-experience {
   border-color: rgba(255, 121, 198, 0.28);
   background: linear-gradient(135deg, rgba(255, 121, 198, 0.12), rgba(255, 255, 255, 0.78));
@@ -717,207 +720,115 @@ h1 {
   color: var(--accent);
 }
 
-.project-media img {
+/* Correction projet Gestion de trafic aérien */
+
+.traffic-aerien-card {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.85fr) minmax(0, 1.15fr);
+  overflow: hidden;
+}
+
+.traffic-aerien-card .project-media {
+  min-height: 100%;
+  border-right: 1px solid var(--line);
+  background: #12141b;
+}
+
+.traffic-aerien-card .project-media img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  min-height: 360px;
+  padding: 16px;
+  object-fit: contain;
+  background: #12141b;
 }
 
-.project-card-image {
-  overflow: hidden;
-  border-radius: 22px;
-  background: rgba(255, 255, 255, 0.82);
-  border: 1px solid rgba(190, 120, 150, 0.22);
-  box-shadow: 0 18px 45px rgba(120, 70, 95, 0.12);
+.traffic-aerien-card .project-body {
+  display: block;
+  padding: 30px;
 }
 
-.project-soft-card {
-  transition:
-    transform 180ms ease,
-    box-shadow 180ms ease,
-    border-color 180ms ease;
-}
-
-.project-soft-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(190, 120, 150, 0.42);
-  box-shadow: 0 24px 60px rgba(120, 70, 95, 0.18);
-}
-
-.project-media {
-  width: 100%;
-  height: 230px;
-  overflow: hidden;
-  background: linear-gradient(135deg, #f8dce7, #f7eef3);
-}
-
-.project-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.project-media-placeholder {
-  display: grid;
-  place-items: center;
-  background:
-    radial-gradient(circle at top left, rgba(255, 190, 215, 0.7), transparent 45%),
-    linear-gradient(135deg, #f7d7e5, #fff6fa);
-}
-
-.project-media-placeholder span {
-  display: grid;
-  width: 82px;
-  height: 82px;
-  place-items: center;
-  border-radius: 50%;
-  background: #ffffff;
-  color: #b9688f;
+.traffic-aerien-card .project-body > h2 {
+  margin-bottom: 12px;
   font-size: 1.8rem;
-  font-weight: 900;
-  box-shadow: 0 14px 34px rgba(120, 70, 95, 0.16);
 }
 
-.project-body {
-  padding: 24px;
+.traffic-aerien-card .project-body > p {
+  margin-bottom: 18px;
 }
 
-.project-number {
-  display: inline-flex;
-  align-items: center;
-  min-height: 30px;
-  margin-bottom: 12px;
-  padding: 0 12px;
-  border-radius: 999px;
-  background: rgba(190, 120, 150, 0.12);
-  color: #b9688f;
-  font-size: 0.78rem;
-  font-weight: 900;
+.traffic-aerien-card .tags {
+  margin-bottom: 22px;
 }
 
-.project-body h2 {
-  margin-bottom: 12px;
-  color: #38232d;
-  font-size: 1.35rem;
-  line-height: 1.2;
+.traffic-aerien-card .project-section {
+  padding: 18px 0;
+  border-top: 1px solid var(--line);
 }
 
-.project-body p {
-  color: #6f5d65;
-  line-height: 1.6;
-}
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 18px 0;
-}
-
-.tags span {
-  display: inline-flex;
-  align-items: center;
-  min-height: 30px;
-  padding: 0 11px;
-  border-radius: 999px;
-  background: #fff3f8;
-  border: 1px solid rgba(190, 120, 150, 0.18);
-  color: #a75f83;
-  font-size: 0.78rem;
-  font-weight: 850;
-}
-
-.project-ac-list {
-  display: grid;
-  gap: 10px;
-  margin: 16px 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.project-ac-list li {
-  padding: 12px 14px;
-  border-radius: 14px;
-  background: #fff8fb;
-  border: 1px solid rgba(190, 120, 150, 0.16);
-  color: #6f5d65;
-  line-height: 1.5;
-}
-
-.project-ac-list strong {
-  color: #b9688f;
-}
-
-/* ===== Sections portfolio dans les projets ===== */
-
-.project-section,
-.modal-section {
-  padding: 20px 0;
-  border-top: 1px solid rgba(190, 120, 150, 0.18);
-}
-
-.project-section:first-child,
-.modal-section:first-child {
+.traffic-aerien-card .project-section:first-of-type {
   border-top: 0;
   padding-top: 0;
 }
 
-.project-section h3,
-.modal-section h3 {
-  margin-bottom: 10px;
-  color: #b9688f;
-  font-size: 0.9rem;
+.traffic-aerien-card .project-section h3 {
+  margin-bottom: 8px;
+  color: var(--accent-2);
+  font-size: 0.85rem;
   font-weight: 900;
-  text-transform: uppercase;
   letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
-.project-section p,
-.modal-section p {
-  margin-bottom: 10px;
-  color: #6f5d65;
+.traffic-aerien-card .project-section p {
+  margin-bottom: 0;
+  color: var(--muted);
   line-height: 1.65;
 }
 
-.modal-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+.traffic-aerien-card .project-ac-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 9px;
+  margin-top: 10px;
+  padding: 0;
+  list-style: none;
 }
 
-.modal-tags span {
-  display: inline-flex;
-  align-items: center;
-  min-height: 30px;
-  padding: 0 11px;
-  border-radius: 999px;
-  background: #fff3f8;
-  border: 1px solid rgba(190, 120, 150, 0.2);
-  color: #a75f83;
-  font-size: 0.78rem;
-  font-weight: 850;
-}
-
-.english-box,
-.modal-section p[lang="en"] {
-  padding: 16px 18px;
-  border-left: 3px solid #c77ba0;
+.traffic-aerien-card .project-ac-list li {
+  padding: 11px 13px;
   border-radius: 16px;
-  background: #fff6fa;
+  background: var(--surface-soft);
+  color: var(--muted);
 }
 
-/* ===== Responsive ===== */
+.traffic-aerien-card .project-ac-list strong {
+  color: var(--accent-2);
+}
 
-@media (max-width: 760px) {
-  .project-media {
-    height: 190px;
+.traffic-aerien-card .english-box,
+.traffic-aerien-card p[lang="en"] {
+  padding: 15px 17px;
+  border-left: 4px solid var(--accent);
+  border-radius: 18px;
+  background: var(--surface-soft);
+}
+
+@media (max-width: 920px) {
+  .traffic-aerien-card {
+    grid-template-columns: 1fr;
   }
 
-  .project-body {
-    padding: 20px;
+  .traffic-aerien-card .project-media {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
   }
 
-  .project-body h2 {
-    font-size: 1.18rem;
+  .traffic-aerien-card .project-media img {
+    min-height: 240px;
+  }
+
+  .traffic-aerien-card .project-body {
+    padding: 22px;
   }
 }
