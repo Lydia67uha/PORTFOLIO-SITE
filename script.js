@@ -22,3 +22,40 @@ if ('IntersectionObserver' in window) {
 } else {
   revealItems.forEach((item) => item.classList.add('is-visible'));
 }
+
+/* Popups projets */
+const modalButtons = document.querySelectorAll('[data-modal-open]');
+const modalCloseButtons = document.querySelectorAll('[data-modal-close]');
+const modals = document.querySelectorAll('.modal');
+
+modalButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const modalId = button.dataset.modalOpen;
+    const modal = document.getElementById(modalId);
+    if (!modal) return;
+    modal.classList.add('active');
+    document.body.classList.add('modal-open');
+  });
+});
+
+modalCloseButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    button.closest('.modal').classList.remove('active');
+    document.body.classList.remove('modal-open');
+  });
+});
+
+modals.forEach((modal) => {
+  modal.addEventListener('click', (event) => {
+    if (event.target === modal) {
+      modal.classList.remove('active');
+      document.body.classList.remove('modal-open');
+    }
+  });
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key !== 'Escape') return;
+  modals.forEach((modal) => modal.classList.remove('active'));
+  document.body.classList.remove('modal-open');
+});
