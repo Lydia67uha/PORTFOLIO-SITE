@@ -150,7 +150,7 @@
         <li><strong>AC12.03</strong> Déployer des supports de transmission.</li>
       <li><strong>AC12.05</strong> Communiquer les résultats obtenus.</li></ul>
       </div>
-      <div class="modal-section"><h3>English summary</h3><p lang="en">this project was to study the performance of a wireless network 
+      <div class="modal-section"><h3>English summary</h3><p lang="en">This project was to study the performance of a wireless network 
       and to understand how transmission parameters affect communication quality.</p></div>
     </div>
   </div>
@@ -158,12 +158,104 @@
   <div class="modal" id="modal-trafic">
     <div class="modal-panel">
       <button class="modal-close" data-modal-close>×</button>
-      <h2>Gestion de trafic aérien</h2>
-      <div class="modal-section"><h3>Objectif du projet</h3><p>Ce projet consistait à développer une application de gestion de trafic aérien avec Django.</p></div>
-      <div class="modal-section"><h3>Travail réalisé</h3><p>Je me suis occupée de la partie CRUD : ajouter, afficher, modifier et supprimer des données depuis une interface web.</p></div>
-      <div class="modal-section"><h3>Preuve</h3><p>La capture montre la structure utilisée pour gérer les données de l’application.</p></div>
-      <div class="modal-section"><h3>Apprentissages Critiques (AC) Mobilisés</h3><ul class="project-ac-list"><li><strong>AC13.02</strong> Lire, exécuter et modifier un programme.</li><li><strong>AC13.04</strong> Comprendre les technologies d’un site web.</li><li><strong>AC13.05</strong> Gérer des données adaptées au projet.</li></ul></div>
-      <div class="modal-section"><h3>English summary</h3><p lang="en">This project was about creating an air traffic management web application. My work focused on the CRUD part.</p></div>
+<h2>Gestion de trafic aérien</h2>
+<div class="modal-section">
+  <h3>Objectif du projet</h3>
+  <p>
+    Dans le cadre de la SAÉ 2.03, l'objectif était de développer une application web
+    permettant de gérer des aéroports à travers une interface accessible depuis un navigateur.
+    Le projet devait permettre la création, la consultation, la modification et la suppression
+    d'informations tout en utilisant une base de données pour stocker les données de manière structurée.
+  </p>
+</div>
+<div class="modal-section">
+  <h3>Travail réalisé</h3>
+  <p>
+    J'ai développé une application web avec Django permettant de gérer des aéroports grâce aux
+    opérations CRUD (Create, Read, Update, Delete). J'ai participé à la création des pages,
+    à la mise en place des formulaires et à l'affichage des données enregistrées dans la base.
+  </p>
+  <p>
+    L'application permet d'ajouter un nouvel aéroport, consulter la liste des aéroports,
+    afficher leurs informations détaillées, modifier les données existantes ou encore
+    supprimer un enregistrement. J'ai également travaillé sur la mise en forme de
+    l'interface afin de rendre son utilisation plus simple et plus agréable.
+  </p>
+</div>
+<div class="modal-section">
+  <h3>Architecture du projet</h3>
+  <p>
+    Le projet repose sur une architecture client-serveur. Lorsqu'un utilisateur effectue
+    une action depuis son navigateur, une requête est envoyée au serveur Django. Celui-ci
+    traite la demande, interagit avec la base de données SQLite puis renvoie une réponse
+    affichée dans l'interface web.
+  </p>
+  <p>
+    Cette organisation permet de séparer l'interface utilisateur, la logique métier
+    de l'application et le stockage des données afin d'obtenir une application plus
+    claire et plus facile à maintenir.
+  </p>
+</div>
+<div class="modal-section">
+  <h3>Preuve de réalisation</h3>
+  <p>
+    L'image présentée correspond à la classe <strong>Aeroport</strong> utilisée dans le projet.
+    Cette classe représente le modèle principal de l'application et permet de stocker
+    les informations des aéroports dans la base de données SQLite.
+  </p>
+  <p>
+    Chaque aéroport possède notamment un identifiant, un nom et un pays. Cette classe
+    constitue le point central des opérations CRUD puisqu'elle permet l'ajout,
+    l'affichage, la modification et la suppression des données depuis l'interface web.
+  </p>
+</div>
+<div class="modal-section">
+  <h3>Technologies utilisées</h3>
+  <div class="modal-tags">
+    <span>Python</span>
+    <span>Django</span>
+    <span>SQLite</span>
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>GitHub</span>
+  </div>
+  <p>
+    Le développement a été réalisé avec Python et Django. SQLite a été utilisé pour
+    stocker les données tandis que HTML et CSS ont permis de construire l'interface
+    utilisateur. GitHub a servi à sauvegarder et versionner le projet.
+  </p>
+</div>
+<div class="modal-section">
+  <h3>Apprentissages Critiques (AC) Mobilisés</h3>
+  <ul class="project-ac-list">
+    <li><strong>AC13.01</strong> Utiliser un système informatique et ses outils.</li>
+    <li><strong>AC13.02</strong> Lire, exécuter, corriger et modifier un programme.</li>
+    <li><strong>AC13.03</strong> Traduire un algorithme dans un langage donné.</li>
+    <li><strong>AC13.04</strong> Connaître l’architecture et les technologies d’un site web.</li>
+    <li><strong>AC13.05</strong> Choisir les mécanismes de gestion de données adaptés.</li>
+    <li><strong>AC13.06</strong> Travailler dans un environnement de développement collaboratif.</li>
+  </ul>
+</div>
+<div class="modal-section">
+  <h3>English Summary</h3>
+  <p lang="en">
+    This project consisted of developing a web application for airport management
+    using Django. The application allows users to create, view, update and delete
+    airport information stored in a SQLite database. My work focused on implementing
+    CRUD functionalities, creating forms, displaying data and improving the user
+    interface. This project helped me strengthen my skills in web development,
+    database management and collaborative development practices.
+  </p>
+</div>
+<div class="modal-section">
+  <h3>Bilan personnel</h3>
+  <p>
+    Cette SAÉ m'a permis d'approfondir mes connaissances en développement web avec Django
+    ainsi qu'en gestion de bases de données. J'ai appris à concevoir une application
+    dynamique, à manipuler des formulaires, à gérer des données persistantes et à mettre
+    en œuvre concrètement les opérations CRUD dans un projet complet.
+  </p>
+</div>
     </div>
   </div>
 
