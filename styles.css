@@ -832,3 +832,89 @@ h1 {
     padding: 22px;
   }
 }
+
+
+/* Correction projet Site web CV */
+
+.cv-web-card {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(255, 241, 244, 0.95), rgba(255, 255, 255, 0.92));
+}
+
+.cv-web-card .project-media {
+  display: grid;
+  place-items: center;
+  min-height: 320px;
+  padding: 22px;
+  border-right: 1px solid var(--line);
+  background: linear-gradient(135deg, #fff1f4, #ffffff);
+}
+
+.cv-web-card .project-media img {
+  width: 100%;
+  height: auto;
+  max-height: 270px;
+  object-fit: contain;
+  padding: 0;
+  border-radius: 18px;
+  background: transparent;
+  box-shadow: 0 16px 40px rgba(91, 52, 64, 0.14);
+}
+
+.cv-web-card .project-body {
+  display: grid;
+  align-content: center;
+  gap: 14px;
+  padding: 32px;
+}
+
+.cv-web-card .project-body h2 {
+  margin: 0;
+  font-size: 1.9rem;
+}
+
+.cv-web-card .project-body p {
+  margin: 0;
+  line-height: 1.65;
+}
+
+.cv-web-card .tags {
+  margin: 6px 0;
+}
+
+.cv-web-card .project-ac-list {
+  display: grid;
+  gap: 10px;
+  margin: 4px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cv-web-card .project-ac-list li {
+  padding: 12px 14px;
+  border-radius: 16px;
+  background: rgba(255, 241, 244, 0.9);
+  border: 1px solid rgba(201, 107, 133, 0.14);
+}
+
+@media (max-width: 920px) {
+  .cv-web-card {
+    grid-template-columns: 1fr;
+  }
+
+  .cv-web-card .project-media {
+    min-height: 240px;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .cv-web-card .project-media img {
+    max-height: 220px;
+  }
+
+  .cv-web-card .project-body {
+    padding: 24px;
+  }
+}
